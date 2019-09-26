@@ -1,0 +1,5 @@
+name: Split
+repository: git@github.com:friendsofflarum/split.git
+directory: locale
+matches: en.yml
+lang: en

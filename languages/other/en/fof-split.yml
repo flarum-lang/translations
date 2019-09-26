@@ -1,0 +1,15 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: 'Split posts from discussions'
+    forum:
+        modal:
+            new_discussion_label: 'Specify the title for the new discussion'
+            submit_button: Split
+            title: 'Split discussion'
+        post:
+            was_split_from: '%1$s post was split from %1$s.|%1$s posts were split from %1$s.'
+            was_split_to: '%1$s post was split to %1$s.|%1$s posts were split to %1$s.'
+        split:
+            from: 'Split from here'
+            to: 'Split to here'
