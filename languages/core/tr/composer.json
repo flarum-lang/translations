@@ -1,5 +1,5 @@
 {
-  "name": "git@github.com:flarum-lang/tr.git",
+  "name": "flarum-lang/tr",
   "type": "flarum-extension",
   "description": "Flarum language pack Turkish.",
   "keywords": ["locale", "tr", "Turkish"],

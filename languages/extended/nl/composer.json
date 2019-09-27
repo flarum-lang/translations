@@ -1,5 +1,5 @@
 {
-  "name": "git@github.com:flarum-lang/nl-extended.git",
+  "name": "flarum-lang/nl-extended",
   "type": "flarum-extension",
   "description": "Flarum language pack Dutch.",
   "keywords": ["locale", "nl", "Dutch"],

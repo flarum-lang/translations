@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-composer require :repository:
+composer require :packagist:
 ```
 
 ## Translating Flarum

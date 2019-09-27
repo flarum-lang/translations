@@ -2,6 +2,7 @@
 
 namespace App;
 
+use GuzzleHttp\Psr7\Uri;
 use Illuminate\Support\Fluent;
 
 /**
@@ -23,6 +24,13 @@ class Translation extends Fluent
             'languages/core/' . $this->code,
             $this->repository['core']
         );
+    }
+
+    public function packagist(string $type)
+    {
+        preg_match('/(?<name>[^\/:]+\/[^\/\.]+)(\.git)?$/', $this->repository[$type], $m);
+      
+        return $m['name'];
     }
 
     public function extendedPath()

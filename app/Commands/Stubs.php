@@ -34,6 +34,7 @@ class Stubs extends Command
     protected function format(string $contents, Translation $translation, $type): string
     {
         $contents = str_replace(':repository:', $translation->repository[$type], $contents);
+        $contents = str_replace(':packagist:', $translation->packagist($type), $contents);
 
         foreach(array_keys($translation->getAttributes()) as $key) {
             if (is_array($value = $translation->$key)) continue;

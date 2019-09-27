@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-composer require git@github.com:flarum-lang/tr.git
+composer require flarum-lang/tr
 ```
 
 ## Translating Flarum

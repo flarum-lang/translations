@@ -1,5 +1,5 @@
 {
-  "name": ":repository:",
+  "name": ":packagist:",
   "type": "flarum-extension",
   "description": "Flarum language pack :title:.",
   "keywords": ["locale", ":code:", ":title:"],
