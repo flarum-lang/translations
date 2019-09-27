@@ -16,6 +16,8 @@ jobs:
         run: php trans lokalise:read
         env:
           LOKALISE_API_TOKEN: ${{ secrets.LOKALISE_API_TOKEN }}
+      - name: Stubs
+        run: php trans stubs
       - name: Push
         run: php trans lokalise:push
         env:
