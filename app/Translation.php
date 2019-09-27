@@ -27,14 +27,14 @@ class Translation extends Fluent
 
     public function extendedPath()
     {
-        return base_path('languages/other/' . $this->code);
+        return base_path('languages/extended/' . $this->code);
     }
 
     public function extendedSubsplit()
     {
         return sprintf(
             '%s:%s',
-            'languages/other/' . $this->code,
+            'languages/extended/' . $this->code,
             $this->repository['extended']
         );
     }

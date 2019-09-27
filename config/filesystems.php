@@ -15,9 +15,17 @@ return [
             'driver' => 'local',
             'root' => storage_path('repositories/'),
         ],
+        'languages' => [
+            'driver' => 'local',
+            'root' => base_path('languages/'),
+        ],
         'root' => [
             'driver' => 'local',
             'root' => base_path(),
+        ],
+        'stubs' => [
+            'driver' => 'local',
+            'root' => base_path('stubs/'),
         ],
     ],
 ];

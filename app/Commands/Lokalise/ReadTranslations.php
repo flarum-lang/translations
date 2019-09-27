@@ -18,7 +18,7 @@ class ReadTranslations extends Command
     {
         foreach([
             'core' => Inventory::LOKALISE_CORE_PROJECT,
-            'other' => Inventory::LOKALISE_OTHER_PROJECT
+            'extended' => Inventory::LOKALISE_OTHER_PROJECT
                 ] as $type => $project) {
             try {
                 $response = $lokalise->files->download($project, [

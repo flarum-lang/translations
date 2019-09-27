@@ -67,7 +67,7 @@ class Subsplit extends Command
 
                 $git->run($split);
             } else {
-                $this->warn('Extended/other path does not exist: ' . $translation->extendedPath());
+                $this->warn('Extended path does not exist: ' . $translation->extendedPath());
             }
         });
     }
@@ -76,11 +76,11 @@ class Subsplit extends Command
     {
         $dir = $git->workingCopy(base_path());
 
-//        if ($dir->hasChanges() || !$dir->isUpToDate()) {
-//            $this->error('Make sure all changes are committed and your local version is up to date.');
-//
-//            exit;
-//        }
+        if ($dir->hasChanges() || !$dir->isUpToDate()) {
+            $this->error('Make sure all changes are committed and your local version is up to date.');
+
+            exit;
+        }
     }
 
     protected function deleteSubsplitDirectory(): void
