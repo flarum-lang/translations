@@ -1,0 +1,28 @@
+{
+  "name": "git@github.com:flarum-lang/tr.git",
+  "type": "flarum-extension",
+  "description": "Flarum language pack Turkish.",
+  "keywords": ["locale", "tr", "Turkish"],
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.10"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    },
+    "flarum-extension": {
+      "title": "Turkish",
+      "icon": {
+        "image": "icon.svg",
+        "backgroundColor": "#00247d",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center"
+      }
+    },
+    "flarum-locale": {
+      "code": "tr",
+      "title": "Turkish"
+    }
+  }
+}
