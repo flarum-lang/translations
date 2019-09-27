@@ -1,3 +1,5 @@
 - code: nl
-  repository: git@github.com:flarum-lang/nl.git
+  repository:
+    core: git@github.com:flarum-lang/nl.git
+    extended: git@github.com:flarum-lang/nl-extended.git
   title: Dutch

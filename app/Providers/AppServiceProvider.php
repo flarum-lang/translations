@@ -34,8 +34,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->app->singleton(Translations::class, function () {
-            return (new Translations(Yaml::parseFile(base_path('translations.yml'))))
-                ->keyBy('code');
+            return new Translations(Yaml::parseFile(base_path('translations.yml')));
         });
     }
 }

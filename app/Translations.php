@@ -2,8 +2,12 @@
 
 namespace App;
 
+use Illuminate\Support\Collection;
 use Symfony\Component\Yaml\Yaml;
 
+/**
+ * @mixin Collection
+ */
 class Translations
 {
     /**
@@ -15,7 +19,7 @@ class Translations
     {
         $this->translations = collect(Yaml::parseFile(base_path('translations.yml')))
             ->map(function ($translation) {
-                return new Fluent($translation);
+                return new Translation($translation);
             })
             ->keyBy('code');
     }

@@ -52,8 +52,6 @@ class PushTranslations extends Command
                 if (! empty($concat)) {
                     $this->upload($lokalise, $extension, $extension->baseName() . '.yml', $concat);
                 }
-
-//                Storage::disk('repositories')->deleteDirectory($extension->baseName());
             });
     }
 
@@ -69,7 +67,6 @@ class PushTranslations extends Command
 
             list($_, $version) = explode("\t", $line);
             $version = Str::after($version, 'refs/tags/');
-//            $version = substr($version, 0, 1) === 'v' ? substr($version, 1) : $version;
 
             try {
                 $version = new Version($version);
