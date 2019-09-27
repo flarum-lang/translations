@@ -24,6 +24,7 @@ class ReadTranslations extends Command
                 $response = $lokalise->files->download($project, [
                     'format'             => 'yaml',
                     'original_filenames' => true,
+                    'filter_data' => ['translated']
                 ]);
             } catch (LokaliseResponseException $e) {
                 continue;
