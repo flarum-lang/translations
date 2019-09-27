@@ -3,7 +3,6 @@
 namespace App\Extensions;
 
 use Illuminate\Support\Fluent;
-use Illuminate\Support\Str;
 
 /**
  * @property string $name
@@ -27,7 +26,7 @@ class Extension extends Fluent
 
     public function isCore(): bool
     {
-        return $this->baseName() === 'core' || Str::startsWith($this->baseName(), 'flarum-');
+        return $this->baseName() === 'core';
     }
     public function project(): string
     {
