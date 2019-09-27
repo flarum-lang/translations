@@ -1,0 +1,5 @@
+flarum_profile_views:
+    forum:
+        user:
+            title_last_viewers: 'Derniers visiteurs'
+            views_count_text: 'Profil vu %1$s fois'

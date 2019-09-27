@@ -1,0 +1,8 @@
+fof-custom-footer:
+    admin:
+        settings:
+            css: CSS
+            height: 'Sayfa Sonu Yüksekliği'
+            js: JS
+            text: 'Sayfa Sonu Metni'
+            title: 'Özel Sayfa Sonu Ayarları'

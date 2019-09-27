@@ -1,0 +1,38 @@
+fof-reactions:
+    admin:
+        nav:
+            desc: 'İfade ekleyin veya düzenleyin.'
+        page:
+            convert:
+                button: 'Eski ifadeleri dönüştür'
+                converted: '%1$s beğeninin tamamı başarıyla dönüştürüldü'
+                converting: 'İfadeleriniz dönüştürülüyor. İşlem birkaç dakika içerisinde bittiğinde sayfayı yenileyebilirsiniz. (Toplam ifade sayısına göre işlem süresi değişiklik gösterebilir)'
+                help: 'Uzantıyı güncellediyseniz, ifadelerin dönüştürülmesi gerekmektedir. Eğer yeni yüklediyseniz bu mesajı görmezden gelebilirsiniz.'
+            reactions:
+                help:
+                    identifier: İfade
+                Helptext: 'İfadeyi veya Font Awesome için uygun kodu girin ve istediğiniz türü seçin.'
+                reactions: 'Mevcut İfadeler'
+                title: 'Özel İfadeler'
+            settings:
+                integrations:
+                    gamification:
+                        downvoteHelptext: 'Otomatik olarak aşağı oya dönüştürülmesini istediğiniz ifadeyi seçin'
+                        downvoteLabel: 'İfadeleri aşağı oya dönüştür'
+                        legend: Oyunlaştırmak
+                        upvoteHelptext: 'Otomatik olarak yukarı oya dönüştürülmesini istediğiniz ifadeyi seçin'
+                        upvoteLabel: 'İfadeleri yukarı oya dönüştür'
+                    legend: Entegrasyonlar
+                    likes:
+                        Helptext: 'Otomatik olarak beğeniye dönüştürülmesini istediğiniz ifadeyi seçin'
+                        Label: 'İfadeleri beğenilere dönüştür'
+                        legend: Beğeniler
+                    warning: 'Aynı ifade beğeniye <strong>ve</strong> yukarı oya <strong>dönüştürülemez</strong>'
+                save_settings: 'Ayarları Kaydet'
+        permissions:
+            react_posts_label: 'Gönderiye ifade bırakma'
+    forum:
+        notification: '%1$s, gönderinize %1$s ifadesi bıraktı'
+        settings:
+            notify_post_reacted_label: 'Birisi gönderime ifade bıraktığında'
+        warning: 'İfadeniz dönüştürüldü'

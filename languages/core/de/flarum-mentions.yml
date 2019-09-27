@@ -1,0 +1,21 @@
+flarum-mentions:
+    forum:
+        composer:
+            mention_tooltip: 'Benutzer*in oder Beitrag erwähnen'
+            reply_to_post_text: 'Antwort auf #%1$s'
+        notifications:
+            others_text: '=> core.ref.some_others'
+            post_mentioned_text: '%1$s hat auf deinen Beitrag geantwortet|%1$s haben auf deinen Beitrag geantwortet'
+            user_mentioned_text: '%1$s hat dich erwähnt'
+        post:
+            mentioned_by_self_text: '%1$s hat auf deinen Beitrag geantwortet.|%1$s haben auf deinen Beitrag geantwortet.'
+            mentioned_by_text: '%1$s hat auf diesen Beitrag geantwortet.|%1$s haben auf diesen Beitrag geantwortet.'
+            others_text: '=> core.ref.some_others'
+            quote_button: Zitieren
+            reply_link: '=> core.ref.reply'
+            you_text: '=> core.ref.you'
+        settings:
+            notify_post_mentioned_label: 'Jemand hat auf deinen Beitrag geantwortet'
+            notify_user_mentioned_label: 'Jemand hat dich in einem Beitrag erwähnt'
+        user:
+            mentions_link: Erwähnungen

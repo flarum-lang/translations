@@ -1,0 +1,9 @@
+flarum-auth-github:
+    admin:
+        github_settings:
+            client_id_label: 'Identifiant du client'
+            client_secret_label: 'Clé secrète du client'
+            title: 'Paramètres de GitHub'
+    forum:
+        log_in:
+            with_github_button: 'Connexion avec GitHub'

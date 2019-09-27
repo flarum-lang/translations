@@ -1,0 +1,16 @@
+fof-prevent-necrobumping:
+    admin:
+        settings:
+            days_help: 'Bir tartışma, söz konusu tartışmadaki son gönderiden bu yana belirtilen gün sayısı geçtiğinde eski olarak işaretlenir.'
+            days_label: Gün
+            message_agreement_label: 'Mesaj Onay (Onay Kutusu)'
+            message_description_label: 'Mesaj Açıklaması'
+            message_title_help: '<code>[time]</code> alanına örneğin "14 gün" yazın.'
+            message_title_label: 'Özel Mesaj Başlığı'
+    forum:
+        composer:
+            warning:
+                checkbox_label: 'Bu tartışmanın oldukça eski olduğunu ancak yine de cevap vermek istediğimi onaylıyorum.'
+                description: 'Bu konu oldukça eskimiş ve muhtemelen daha fazla tartışılmaya uygun değil.'
+                error: 'Bu tartışma yanıtlayamayacağınız kadar eski.'
+                title: 'Bu tartışma <b>%1$s</b>''den eski.'

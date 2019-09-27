@@ -1,0 +1,27 @@
+omiscz-auth-steam:
+    admin:
+        settings:
+            api_key_label: 'API Key'
+            title: 'Steam Auth Ayarları'
+    forum:
+        alerts:
+            already_linked: 'Steam hesabınız zaten bağlı!'
+            already_used: 'Steam hesabı zaten başka bir hesaba bağlı!'
+            error: 'Bir şeyler yanlış gitti, lütfen daha sonra tekrar deneyin!'
+            link_success: 'Steam hesabı bağlantısı başarılı.'
+            unlink_success: 'Steam bağlantısı başarıyla kaldırıldı.'
+        buttons:
+            link: 'Steam Hesabını Bağla'
+            login: 'Steam ile Giriş Yap'
+            unlink: 'Steam Bağlantısını Kaldır'
+        modals:
+            link:
+                title: 'Steam Hesabını Bağla'
+            unlink:
+                buttons:
+                    cancel: Hayır!
+                    confirm: 'Evet, bağlantıyı kaldır'
+                info:
+                    confirm: 'Steam hesabı bağlantısını kaldırmak istediğinize emin misiniz?'
+                    no_providers: 'Başka bir giriş aracı kullanmadığınız için şifrenizi sıfırlamanız gerekecektir.'
+                title: 'Steam Bağlantısını Kaldır'

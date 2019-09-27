@@ -1,0 +1,15 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: 'Gönderileri tartışmalardan ayır.'
+    forum:
+        modal:
+            new_discussion_label: 'Yeni tartışma için bir başlık belirleyin'
+            submit_button: Ayır
+            title: 'Tartışmayı ayır'
+        post:
+            was_split_from: '%1$s gönderi %1$s tartışmasından taşındı.|%1$s gönderi %1$s tartışmasından taşındı.'
+            was_split_to: '%1$s gönderi %1$s tartışmasına taşındı.|%1$s gönderi %1$s tartışmasına taşındı.'
+        split:
+            from: 'Buradan ayır'
+            to: 'Buraya ayır'

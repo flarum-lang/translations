@@ -1,0 +1,17 @@
+flarum-lock:
+    admin:
+        permissions:
+            lock_discussions_label: 'Diskussion schließen'
+    forum:
+        badge:
+            locked_tooltip: Geschlossen
+        discussion_controls:
+            lock_button: Schließen
+            unlock_button: Öffnen
+        notifications:
+            discussion_locked_text: 'von %1$s geschlossen'
+        post_stream:
+            discussion_locked_text: '%1$s hat die Diskussion geschlossen.'
+            discussion_unlocked_text: '%1$s hat die Diskussion geöffnet.'
+        settings:
+            notify_discussion_locked_label: 'Jemand hat eine Diskussion von dir geschlossen'

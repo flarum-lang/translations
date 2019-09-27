@@ -1,0 +1,35 @@
+flarum-flags:
+    admin:
+        permissions:
+            flag_posts_label: 'Signaler les messages'
+            view_flags_label: 'Voir les messages signalés'
+        settings:
+            guidelines_url_label: 'Lien vers les règles de la communauté'
+            title: 'Paramètres des signalements'
+    forum:
+        flag_post:
+            confirmation_message: 'Merci d’avoir signalé ce message. Les modérateurs s’en occuperont dès que possible.'
+            dismiss_button: '=> core.ref.okay'
+            reason_inappropriate_label: inapproprié
+            reason_inappropriate_text: 'Ce message est offensant, vulgaire, ou ne respecte pas les <a>règles de la communauté</a>.'
+            reason_off_topic_label: hors-sujet
+            reason_off_topic_text: 'Ce message n’est pas pertinent à la discussion actuelle et devrait être déplacé ailleurs.'
+            reason_other_label: autre
+            reason_spam_label: indésirable
+            reason_spam_text: 'Ce message est publicitaire.'
+            submit_button: '=> flarum-flags.ref.flag_post'
+            title: '=> flarum-flags.ref.flag_post'
+        flagged_posts:
+            empty_text: 'Aucun message signalé'
+            item_text: '%1$s dans <em>%1$s</em>'
+            title: '=> flarum-flags.ref.flagged_posts'
+            tooltip: '=> flarum-flags.ref.flagged_posts'
+        post_controls:
+            flag_button: Signaler
+        post:
+            dismiss_flag_button: 'Annuler le signalement'
+            flagged_by_text: '%1$s a signalé ça'
+            flagged_by_with_reason_text: '%1$s a signalé ça comme %1$s'
+    ref:
+        flag_post: 'Signaler le message'
+        flagged_posts: 'Messages signalés'

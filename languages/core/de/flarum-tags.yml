@@ -1,0 +1,65 @@
+flarum-tags:
+    admin:
+        basics:
+            tags_label: '=> flarum-tags.ref.tags'
+        edit_tag:
+            color_label: '=> core.ref.color'
+            delete_tag_button: Löschen
+            delete_tag_confirmation: 'Soll die Kategorie wirklich gelöscht werden? Die Diskussionen werden NICHT gelöscht.'
+            description_label: Beschreibung
+            hide_label: 'Von allen Diskussionen ausblenden'
+            icon_label: '=> core.ref.icon'
+            icon_text: '=> core.ref.icon_text'
+            name_label: '=> flarum-tags.ref.name'
+            name_placeholder: '=> flarum-tags.ref.name'
+            slug_label: Slug
+            submit_button: '=> core.ref.save_changes'
+            title: '=> flarum-tags.ref.create_tag'
+        nav:
+            tags_button: '=> flarum-tags.ref.tags'
+            tags_text: 'Ordne die Liste der Kategorien um die Diskussionen zu organisieren.'
+        permissions:
+            allow_edit_tags_label: 'Erlaube, Kategorien zu ändern'
+            restrict_by_tag_heading: 'Durch Kategorien beschränken'
+            tag_discussions_label: 'Diskussion markieren'
+        tag_settings:
+            range_separator_text: ' bis '
+            required_primary_heading: 'Anzahl der benötigten Hauptkategorien'
+            required_primary_text: 'Gib die minimale und die maximale Anzahl von Hauptkategorien an, die einer Diskussion hinzugefügt werden können.'
+            required_secondary_heading: 'Anzahl der benötigten Unterkategorien'
+            required_secondary_text: 'Gib die minimale und die maximale Anzahl von Unterkategorien an, die einer Diskussion hinzugefügt werden können.'
+            title: Kategorie-Einstellungen
+        tags:
+            about_tags_text: 'Kategorien sind dazu da, um Diskussionen zu strukturieren. Hauptkategorien sind wie traditionelle Kategorien in einem Forum: Sie können in zwei Ebenen geordnet werden. Unterkategorien haben keine Ebenen und keine Reihenfolge. Sie können helfen, die Diskussionen feiner zu strukturieren'
+            create_tag_button: '=> flarum-tags.ref.create_tag'
+            primary_heading: Hauptkategorien
+            secondary_heading: Unterkategorien
+            settings_button: Einstellungen
+    forum:
+        choose_tags:
+            choose_primary_placeholder: 'Wähle eine Hauptkategorie|Wähle %1$s Hauptkategorien'
+            choose_secondary_placeholder: 'Wähle eine Kategorie mehr|Wähle %1$s Kategorien mehr'
+            edit_title: 'Kategorien für %1$s bearbeiten'
+            submit_button: '=> core.ref.okay'
+            title: 'Kategorien für die Diskussion auswählen'
+        composer_discussion:
+            choose_tags_link: 'Kategorien auswählen'
+        discussion_controls:
+            edit_tags_button: 'Kategorien ändern'
+        header:
+            back_to_tags_tooltip: 'Zurück zur Kategorien-Auswahl'
+        index:
+            more_link: Mehr…
+            tags_link: '=> flarum-tags.ref.tags'
+            untagged_link: 'nicht markiert'
+        post_stream:
+            added_and_removed_tags_text: '%1$s hat die %1$s hinzugefügt und die %1$s entfernt.'
+            added_tags_text: '%1$s hat die %1$s hinzugefügt.'
+            removed_tags_text: '%1$s hat die %1$s entfernt.'
+            tags_text: '%1$s Kategorie|%1$s Kategorien'
+    lib:
+        deleted_tag_text: Gelöscht
+    ref:
+        create_tag: 'Kategorie erstellen'
+        name: Name
+        tags: Kategorien

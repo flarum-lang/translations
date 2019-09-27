@@ -1,0 +1,42 @@
+fof-byobu:
+    admin:
+        permission:
+            create_private_discussions_with_blocking_users: 'Özel tartışmaları engelleyen kullanıcılarla özel tartışma oluştur'
+            create_private_discussions_with_groups: 'Gruplar ile özel tartışma oluştur'
+            create_private_discussions_with_users: 'Kullanıcılar ile özel tartışma oluştur'
+            edit_group_recipients: 'Özel tartışmalarda yer alan grupları düzenle'
+            edit_user_recipients: 'Özel tartışmalarda yer alan kullanıcıları düzenle'
+        settings:
+            byobu_users_page_label: 'Kullanıcı sayfasına özel tartışma alanı ekle'
+    forum:
+        badges:
+            is_private:
+                tooltip: 'Özel tartışma'
+        buttons:
+            add_recipients: Alıcılar
+            edit_recipients: 'Alıcıları Düzenle'
+            send_pd: '%1$s kullanıcısına mesaj gönder'
+            submit: Tamam
+        input:
+            search_recipients: 'İlk üç karakteri yazarak bir alıcı arayın...'
+        labels:
+            recipients: '%1$s Alıcı|%1$s Alıcı'
+            user_deleted: '-silinmiş-'
+        modal:
+            titles:
+                add_recipients: 'Tartışmana alıcı ekle'
+                update_recipients: '%1$s alıcılarını güncelle'
+        nav:
+            private_discussions: 'Özel tartışma'
+        post:
+            recipients_modified:
+                added: '%1$s, %1$s alıcılara ekledi.'
+                added_and_removed: '%1$s, %1$s alıcılara ekledi ve %1$s alıcılardan kaldırdı.'
+                removed: '%1$s, %1$s alıcılardan kaldırdı.'
+        search:
+            headings:
+                groups: 'Yetki Grupları'
+        user:
+            byobu_link: 'Özel Tartışmalar'
+            settings:
+                block_pd: 'Özel tartışmaları engelle'

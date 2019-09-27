@@ -1,0 +1,20 @@
+flarum-suspend:
+    admin:
+        permissions:
+            suspend_users_label: 'Nutzer ausschließen'
+    forum:
+        notifications:
+            user_suspended_text: '%1$s hat dich für %1$s gesperrt'
+            user_unsuspended_text: '%1$s hat dich entsperrt'
+        suspend_user:
+            indefinitely_label: 'Dauerhaft ausschließen'
+            limited_time_days_text: ' Tage'
+            limited_time_label: 'Temporär ausschließen …'
+            not_suspended_label: 'Nicht ausschließen'
+            status_heading: Ausschluss-Status
+            submit_button: '=> core.ref.save_changes'
+            title: '%1$s ausschließen'
+        user_badge:
+            suspended_tooltip: Ausgeschlossen
+        user_controls:
+            suspend_button: Ausschließen

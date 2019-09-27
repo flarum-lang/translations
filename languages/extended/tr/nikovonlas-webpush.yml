@@ -1,0 +1,54 @@
+nikovonlas-webpush:
+    admin:
+        web-push-settings:
+            api_key: 'OneSignal App Key'
+            app_id: 'OneSignal App ID'
+            excerpt: 'Bildirimdeki alıntıların uzunluğu'
+            subdomain: 'OneSignal Subdomain'
+            title: 'Tarayıcı Bildirimleri Ayarları'
+            type:
+                custom: Özel
+                description: 'OneSignal bağlantı türü'
+                standart: Standart
+            user_key: 'OneSignal User key'
+    forum:
+        subscribe: 'Tarayıcı bildirimlerine abone olun'
+        unsubscribe: 'Tarayıcı bildirimleri aboneliklerini durdurun'
+    notify:
+        delete:
+            message: '%1$s tartışmanı sildi "%1$s"'
+            title: 'Tartışma silindi'
+        flag:
+            message: '%1$s flag post "%1$s"'
+            title: 'New flagged post'
+        like:
+            message: '%1$s senin gönderini beğendi "%1$s"'
+            title: 'Gönderin beğenildi'
+        lock:
+            message: '%1$s tartışmanı kilitledi "%1$s"'
+            title: 'Tartışma kilitlendi'
+        mention-post:
+            message: '%1$s senden gönderide bahsetti "%1$s"'
+            title: 'Bir gönderide bahsedildin'
+        mention:
+            message: '%1$s senden bir gönderide bahsetti "%1$s"'
+            title: 'Bir gönderide bahsedildin'
+        post:
+            message: '%1$s yeni bir gönderi oluşturdu "%1$s"'
+            title: 'Abone olduğun bölümde yeni gönderi'
+        rename:
+            message: '%1$s tartışmanın adını değiştirdi "%1$s"'
+            title: 'Tartışmanın adı değiştirildi'
+        suspend:
+            message: '%1$s hesabını askıya aldı'
+            title: 'Hesabınız askıya alındı'
+        tag:
+            discussion:
+                message: '%1$s yeni bir tartışma başlattı "%1$s"'
+                title: 'Takip edilen etikette yeni bir tartışma'
+            post:
+                message: '%1$s yeni bir gönderi oluşturdu "%1$s"'
+                title: 'Takip edilen etikette yeni bir gönderi'
+        гтsuspend:
+            message: '%1$s hesabınızın erişimini açtı'
+            title: 'Hesabınız erişilebilir'

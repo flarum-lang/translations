@@ -1,0 +1,20 @@
+flarum-suspend:
+    admin:
+        permissions:
+            suspend_users_label: 'Suspendre les utilisateurs'
+    forum:
+        notifications:
+            user_suspended_text: '%1$s vous a suspendu pendant %1$s'
+            user_unsuspended_text: '%1$s a retiré votre suspension'
+        suspend_user:
+            indefinitely_label: 'Suspendre indéfiniment'
+            limited_time_days_text: ' jour(s)'
+            limited_time_label: 'Suspendre temporairement…'
+            not_suspended_label: 'Non suspendu'
+            status_heading: 'Statut de la suspension'
+            submit_button: '=> core.ref.save_changes'
+            title: 'Suspendre %1$s'
+        user_badge:
+            suspended_tooltip: Suspendu
+        user_controls:
+            suspend_button: Suspendre

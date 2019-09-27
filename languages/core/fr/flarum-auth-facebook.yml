@@ -1,0 +1,9 @@
+flarum-auth-facebook:
+    admin:
+        facebook_settings:
+            app_id_label: 'Identifiant de l’application'
+            app_secret_label: 'Clé secrète de l’application'
+            title: 'Paramètres de Facebook'
+    forum:
+        log_in:
+            with_facebook_button: 'Connexion avec Facebook'

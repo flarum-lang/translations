@@ -1,0 +1,11 @@
+fof-socialprofile:
+    forum:
+        edit:
+            add: Ekle
+            delete: Sil
+            deletetitle: 'Butonu Sil'
+            edit: Düzenle
+            headtitle: 'Butonları Düzenle'
+            submit: Kaydet
+            title: Başlık
+            url: Bağlantı

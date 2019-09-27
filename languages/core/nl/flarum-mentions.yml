@@ -1,0 +1,21 @@
+flarum-mentions:
+    forum:
+        composer:
+            mention_tooltip: 'Vermeld een gebruiker of bericht'
+            reply_to_post_text: 'Reactie op #%1$s'
+        notifications:
+            others_text: '=> core.ref.some_others'
+            post_mentioned_text: '%1$s heeft gereageerd op je bericht|%1$s hebben gereageerd op je bericht'
+            user_mentioned_text: '%1$s heeft je genoemd'
+        post:
+            mentioned_by_self_text: '%1$s hebt hierop gereageerd|%1$s hebben hierop gereageerd'
+            mentioned_by_text: '%1$s heeft hierop gereageerd|%1$s hebben hierop gereageerd'
+            others_text: '=> core.ref.some_others'
+            quote_button: Citeer
+            reply_link: '=> core.ref.reply'
+            you_text: '=> core.ref.you'
+        settings:
+            notify_post_mentioned_label: 'Iemand reageert op mijn berichten'
+            notify_user_mentioned_label: 'Iemand noemt mij in een bericht'
+        user:
+            mentions_link: Vermeldingen
