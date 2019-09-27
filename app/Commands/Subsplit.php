@@ -2,55 +2,73 @@
 
 namespace App\Commands;
 
+use App\Concerns\GitOutPutHandling;
 use App\Translation;
 use App\Translations;
 use GitWrapper\GitCommand;
 use GitWrapper\GitWrapper;
+use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
 
 class Subsplit extends Command
 {
+    use GitOutPutHandling;
+
     protected $signature = 'subsplit';
     protected $description = 'Pushes changes of languages onto their own repositories.';
 
-    public function handle(GitWrapper $git, Translations $translations)
+    public function handle(Translations $translations)
     {
+        $git = $this->getGit();
+
+        $this->deleteSubsplitDirectory();
+
         $this->preventChanges($git);
 
         $this->init($git);
 
         $this->split($git, $translations);
+
+        $this->deleteSubsplitDirectory();
     }
 
     protected function init(GitWrapper $git)
     {
         $remote = new GitCommand('remote', 'get-url', '--push', 'origin');
-        $remote = $git->run($remote);
+        $remote = trim($git->run($remote, base_path()));
 
         $init = new GitCommand('subsplit', 'init', $remote);
-        $git->run($init);
+        $git->run($init, base_path());
     }
 
     protected function split(GitWrapper $git, Translations $translations)
     {
         $translations->each(function (Translation $translation) use ($git) {
-            $split = new GitCommand(
-                'subsplit',
-                'publish',
-                '--heads="master"',
-                $translation->coreSubsplit()
-            );
+            if (is_dir($translation->corePath())) {
+                $split = new GitCommand(
+                    'subsplit',
+                    'publish',
+                    '--heads=master',
+                    $translation->coreSubsplit()
+                );
 
-            $git->run($split);
+                $git->run($split, base_path());
+            } else {
+                $this->warn('Core path does not exist: ' . $translation->corePath());
+            }
 
-            $split = new GitCommand(
-                'subsplit',
-                'publish',
-                '--heads="master"',
-                $translation->extendedSubsplit()
-            );
+            if (is_dir($translation->extendedPath())) {
+                $split = new GitCommand(
+                    'subsplit',
+                    'publish',
+                    '--heads=master',
+                    $translation->extendedSubsplit()
+                );
 
-            $git->run($split);
+                $git->run($split);
+            } else {
+                $this->warn('Extended/other path does not exist: ' . $translation->extendedPath());
+            }
         });
     }
 
@@ -58,10 +76,15 @@ class Subsplit extends Command
     {
         $dir = $git->workingCopy(base_path());
 
-        if ($dir->hasChanges() || !$dir->isUpToDate()) {
-            $this->error('Make sure all changes are committed and your local version is up to date.');
+//        if ($dir->hasChanges() || !$dir->isUpToDate()) {
+//            $this->error('Make sure all changes are committed and your local version is up to date.');
+//
+//            exit;
+//        }
+    }
 
-            exit;
-        }
+    protected function deleteSubsplitDirectory(): void
+    {
+        Storage::disk('root')->deleteDirectory('.subsplit');
     }
 }

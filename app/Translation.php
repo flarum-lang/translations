@@ -11,20 +11,30 @@ use Illuminate\Support\Fluent;
  */
 class Translation extends Fluent
 {
+    public function corePath()
+    {
+        return base_path('languages/core/' . $this->code);
+    }
+
     public function coreSubsplit()
     {
         return sprintf(
             '%s:%s',
-            base_path('languages/core/' . $this->code),
+            'languages/core/' . $this->code,
             $this->repository['core']
         );
+    }
+
+    public function extendedPath()
+    {
+        return base_path('languages/other/' . $this->code);
     }
 
     public function extendedSubsplit()
     {
         return sprintf(
             '%s:%s',
-            base_path('languages/other/' . $this->code),
+            'languages/other/' . $this->code,
             $this->repository['extended']
         );
     }

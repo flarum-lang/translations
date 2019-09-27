@@ -110,7 +110,7 @@ core:
             permissions_text: ''
         permissions_controls:
             allow_indefinitely_button: ''
-            allow_some_minutes_button: 'Voor {count} minuut|Voor {count} minuten'
+            allow_some_minutes_button: ''
             allow_ten_minutes_button: ''
             allow_until_reply_button: ''
             everyone_button: ''
@@ -166,7 +166,7 @@ core:
             submit_button: ''
             title: ''
         change_password:
-            send_button: 'Stuur e-mail met nieuw wachtwoord'
+            send_button: ''
             text: ''
             title: ''
         composer_discussion:
@@ -186,7 +186,7 @@ core:
             submit_button: ''
             view_button: ''
         composer:
-            close_tooltip: Sluiten
+            close_tooltip: ''
             exit_full_screen_tooltip: ''
             full_screen_tooltip: ''
             minimize_tooltip: ''
@@ -229,7 +229,7 @@ core:
             title: ''
         header:
             admin_button: ''
-            back_to_index_tooltip: 'Terug naar het begin'
+            back_to_index_tooltip: ''
             log_in_link: ''
             log_out_button: ''
             profile_button: ''
@@ -383,19 +383,19 @@ core:
         log_in: ''
         log_out: ''
         mark_all_as_read: ''
-        next_page: 'Volgende pagina'
+        next_page: ''
         notifications: ''
         okay: ''
-        password: Wachtwoord
-        posts: Berichten
+        password: ''
+        posts: ''
         previous_page: ''
         remove: ''
         rename: ''
         reply: ''
         reset_your_password: ''
         restore: ''
-        save_changes: 'Wijzigingen opslaan'
-        settings: Instellingen
+        save_changes: ''
+        settings: ''
         sign_up: ''
         some_others: ''
         start_a_discussion: ''

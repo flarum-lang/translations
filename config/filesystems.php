@@ -15,5 +15,9 @@ return [
             'driver' => 'local',
             'root' => storage_path('repositories/'),
         ],
+        'root' => [
+            'driver' => 'local',
+            'root' => base_path(),
+        ],
     ],
 ];

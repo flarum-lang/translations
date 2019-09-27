@@ -17,7 +17,7 @@ class Extension extends Fluent
 {
     public function baseName(): string
     {
-        return basename($this->file, '.yaml');
+        return basename($this->file, '.yml');
     }
     public function zipName(): string
     {

@@ -10,13 +10,10 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use LaravelZero\Framework\Commands\Command;
-use Lokalise\Exceptions\LokaliseResponseException;
 use Lokalise\LokaliseApiClient;
 use PharIo\Version\InvalidVersionException;
 use PharIo\Version\Version;
-use PharIo\Version\VersionNumber;
 use Symfony\Component\Finder\Finder;
-use ZipArchive;
 
 class PushTranslations extends Command
 {

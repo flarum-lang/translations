@@ -3,3 +3,8 @@
     core: git@github.com:flarum-lang/nl.git
     extended: git@github.com:flarum-lang/nl-extended.git
   title: Dutch
+- code: tr
+  repository:
+    core: git@github.com:flarum-lang/tr.git
+    extended: git@github.com:flarum-lang/tr-extended.git
+  title: Turkish

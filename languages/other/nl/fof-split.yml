@@ -1,0 +1,15 @@
+fof-split:
+    admin:
+        permissions:
+            split_discussion_label: ''
+    forum:
+        modal:
+            new_discussion_label: ''
+            submit_button: ''
+            title: ''
+        post:
+            was_split_from: ''
+            was_split_to: ''
+        split:
+            from: ''
+            to: ''
