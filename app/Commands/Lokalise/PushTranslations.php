@@ -4,12 +4,17 @@ namespace App\Commands\Lokalise;
 
 use App\Extensions\Extension;
 use App\Extensions\Inventory;
+use GitWrapper\GitCommand;
 use GitWrapper\GitWrapper;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use LaravelZero\Framework\Commands\Command;
 use Lokalise\Exceptions\LokaliseResponseException;
 use Lokalise\LokaliseApiClient;
+use PharIo\Version\InvalidVersionException;
+use PharIo\Version\Version;
+use PharIo\Version\VersionNumber;
 use Symfony\Component\Finder\Finder;
 use ZipArchive;
 
@@ -23,7 +28,13 @@ class PushTranslations extends Command
         $inventory
             ->each(function (Extension $extension) use ($git, $lokalise) {
                 Storage::disk('repositories')->deleteDirectory($extension->baseName());
-                $git->cloneRepository($extension->repository, $path = storage_path('repositories/' . $extension->baseName()));
+
+                $tag = $this->latestTag($git, $extension) ?? 'dev-master';
+                $git->cloneRepository(
+                    $extension->repository,
+                    $path = storage_path('repositories/' . $extension->baseName()),
+                    ['branch' => $tag]
+                );
 
                 $concat = '';
 
@@ -42,8 +53,36 @@ class PushTranslations extends Command
                     $this->upload($lokalise, $extension, $extension->baseName() . '.yml', $concat);
                 }
 
-                Storage::disk('repositories')->deleteDirectory($extension->baseName());
+//                Storage::disk('repositories')->deleteDirectory($extension->baseName());
             });
+    }
+
+    protected function latestTag(GitWrapper $git, Extension $extension): ?string
+    {
+        $output = $git->run(new GitCommand('ls-remote', '--tags', $extension->repository));
+
+        $highest = null;
+
+
+        foreach (explode("\n", $output) as $line) {
+            if (empty($line)) continue;
+
+            list($_, $version) = explode("\t", $line);
+            $version = Str::after($version, 'refs/tags/');
+//            $version = substr($version, 0, 1) === 'v' ? substr($version, 1) : $version;
+
+            try {
+                $version = new Version($version);
+            } catch(InvalidVersionException $e) {
+                continue;
+            }
+
+            if ($highest === null || ($highest && $version->isGreaterThan($highest))) {
+                $highest = $version;
+            }
+        }
+
+        return $highest instanceof Version ? $highest->getVersionString() : null;
     }
 
     protected function upload(LokaliseApiClient $lokalise, Extension $extension, string $name, string $contents)
