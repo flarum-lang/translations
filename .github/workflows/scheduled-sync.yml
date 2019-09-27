@@ -1,0 +1,26 @@
+name: Sync extensions, Lokalise and packages
+on:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  sync:
+    name: Read translations
+    runs-on: php:7.3
+    steps:
+      - name: Composer install
+        uses: MilesChou/composer-action
+      - name: Read
+        run: php trans lokalise:read
+      - name: Push
+        run: php trans lokalise:push
+      - name: Commit
+        uses: github-actions-x/commit
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'master'
+          commit-message: 'publish latest translations'
+          force-add: 'true'
+          rebase: 'true'
+      - name: Subsplit
+        run: php trans subsplit
+
