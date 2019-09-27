@@ -2,6 +2,7 @@
 
 namespace App\Commands\Lokalise;
 
+use App\Concerns\GitOutPutHandling;
 use App\Extensions\Extension;
 use App\Extensions\Inventory;
 use GitWrapper\GitCommand;
@@ -17,11 +18,15 @@ use Symfony\Component\Finder\Finder;
 
 class PushTranslations extends Command
 {
+    use GitOutPutHandling;
+
     protected $signature = 'lokalise:push';
     protected $description = 'Downloads configured extensions and pushes all translations to Lokalise.';
 
-    public function handle(Inventory $inventory, LokaliseApiClient $lokalise, GitWrapper $git)
+    public function handle(Inventory $inventory, LokaliseApiClient $lokalise)
     {
+        $git = $this->getGit();
+
         $inventory
             ->each(function (Extension $extension) use ($git, $lokalise) {
                 Storage::disk('repositories')->deleteDirectory($extension->baseName());
