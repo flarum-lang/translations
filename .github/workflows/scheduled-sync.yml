@@ -1,5 +1,8 @@
 name: Sync extensions, Lokalise and packages
 on:
+  push:
+    branches:
+      -master
   schedule:
     - cron: '*/20 * * * *'
 jobs:
@@ -8,7 +11,7 @@ jobs:
     runs-on: php:7.3
     steps:
       - name: Composer install
-        uses: MilesChou/composer-action
+        uses: MilesChou/composer-action@master
       - name: Read
         run: php trans lokalise:read
         env:
@@ -18,7 +21,7 @@ jobs:
         env:
           LOKALISE_API_TOKEN: ${{ secrets.LOKALISE_API_TOKEN }}
       - name: Commit
-        uses: github-actions-x/commit
+        uses: github-actions-x/commit@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: 'master'
