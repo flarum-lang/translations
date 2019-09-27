@@ -5,8 +5,8 @@ The Flarum translation collaborative.
 - We store Flarum core translations and third party translations separately.
 - We automatically pull the latest version of an extension to read and sync translations for.
 - We use lokalise for:
- - [core translations](https://lokalise.com/public/722660935d41917e602af4.06892971/).
- - [third party translations](https://lokalise.com/public/905741775d41e764bd0b00.56796766/).
+    - [core translations](https://lokalise.com/public/722660935d41917e602af4.06892971/).
+    - [third party translations](https://lokalise.com/public/905741775d41e764bd0b00.56796766/).
 
 ## Adding extensions
 
