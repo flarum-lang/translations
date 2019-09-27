@@ -11,8 +11,12 @@ jobs:
         uses: MilesChou/composer-action
       - name: Read
         run: php trans lokalise:read
+        env:
+          LOKALISE_API_TOKEN: ${{ secrets.LOKALISE_API_TOKEN }}
       - name: Push
         run: php trans lokalise:push
+        env:
+          LOKALISE_API_TOKEN: ${{ secrets.LOKALISE_API_TOKEN }}
       - name: Commit
         uses: github-actions-x/commit
         with:
