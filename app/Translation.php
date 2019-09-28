@@ -29,7 +29,7 @@ class Translation extends Fluent
     public function packagist(string $type)
     {
         preg_match('/(?<name>[^\/:]+\/[^\/\.]+)(\.git)?$/', $this->repository[$type], $m);
-      
+
         return $m['name'];
     }
 
