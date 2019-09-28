@@ -4,32 +4,14 @@ on:
     branches:
       -master
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '*/30 * * * *'
 jobs:
   sync:
-    name: Read translations
-    runs-on: php:7.3
+    name: Sync translations
+    runs-on:
     steps:
-      - name: Composer install
-        uses: MilesChou/composer-action@master
-      - name: Read
-        run: php trans lokalise:read
+      - name: Sync
+        uses: flarum-lang:sync-action@master
         env:
           LOKALISE_API_TOKEN: ${{ secrets.LOKALISE_API_TOKEN }}
-      - name: Stubs
-        run: php trans stubs
-      - name: Push
-        run: php trans lokalise:push
-        env:
-          LOKALISE_API_TOKEN: ${{ secrets.LOKALISE_API_TOKEN }}
-      - name: Commit
-        uses: github-actions-x/commit@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: 'master'
-          commit-message: 'publish latest translations'
-          force-add: 'true'
-          rebase: 'true'
-      - name: Subsplit
-        run: php trans subsplit
-
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
