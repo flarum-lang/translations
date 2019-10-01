@@ -8,7 +8,6 @@ on:
 jobs:
   sync:
     name: Sync translations
-    runs-on:
     steps:
       - name: Sync
         uses: flarum-lang:sync-action@master
