@@ -9,8 +9,9 @@ jobs:
   sync:
     name: Sync translations
     steps:
+      - uses: actions/checkout@master
       - name: Sync
-        uses: flarum-lang:sync-action@master
+        uses: flarum-lang/sync-action@master
         env:
           LOKALISE_API_TOKEN: ${{ secrets.LOKALISE_API_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
