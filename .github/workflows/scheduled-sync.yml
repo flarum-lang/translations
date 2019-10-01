@@ -1,4 +1,4 @@
-name: Sync extensions, Lokalise and packages
+name: Sync translations
 on:
   push:
     branches:
