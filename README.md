@@ -36,3 +36,12 @@ equal to the name Flarum uses for her extensions:
 - Matches tells us how to find files, this can be a regular expression, one file or using wildcards.
 - Lang specifies what language these files are in. Don't upload different languages, use English if available! 
  
+## Translators
+
+In order to guarantee the best translations to flew into our language packs, we've decided to give some structure to this team:
+
+- Flarum core team members are responsible to keep the translation automation going.
+- Translation reviewers approve new and changed translations.
+- Translators are free to suggest new and alternative translations.
+
+Only reviewed translation keys will be used inside our translations.
