@@ -1,5 +1,5 @@
 name: Upload
-repository: git@github.com:friendsofflarum/upload.git
+repository: https://github.com/friendsofflarum/upload.git
 directory: resources/locale
 matches: en.yml
 lang: en

@@ -1,5 +1,5 @@
 name: Flarum English Language
-repository: git@github.com:flarum/lang-english.git
+repository: https://github.com/flarum/lang-english.git
 directory: locale
 matches: '*.yml'
 lang: en

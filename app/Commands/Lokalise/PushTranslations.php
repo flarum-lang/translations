@@ -32,6 +32,7 @@ class PushTranslations extends Command
                 Storage::disk('repositories')->deleteDirectory($extension->baseName());
 
                 $tag = $this->latestTag($git, $extension) ?? 'dev-master';
+
                 $workingCopy = $git->cloneRepository(
                     $extension->repository,
                     $path = storage_path('repositories/' . $extension->baseName()),
