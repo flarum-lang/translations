@@ -21,6 +21,7 @@
         "cpliakas/git-wrapper": "^2.2",
         "laravel-zero/framework": "5.8.*",
         "lokalise/php-lokalise-api": "^2.2",
+        "phar-io/version": "^2.0",
         "symfony/yaml": "^4.3"
     },
     "require-dev": {
