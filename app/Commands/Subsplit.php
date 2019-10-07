@@ -23,7 +23,7 @@ class Subsplit extends Command
 
         $this->deleteSubsplitDirectory();
 
-        $this->preventChanges($git);
+//        $this->preventChanges($git);
 
         $this->init($git);
 
