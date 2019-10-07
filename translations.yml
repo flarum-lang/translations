@@ -8,3 +8,8 @@
     core: git@github.com:flarum-lang/tr.git
     extended: git@github.com:flarum-lang/tr-extended.git
   title: Turkish
+- code: lo
+  repository:
+    core: git@github.com:flarum-lang/lo.git
+    extended: git@github.com:flarum-lang/lo-extended.git
+  title: Lao
