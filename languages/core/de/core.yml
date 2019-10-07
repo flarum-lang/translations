@@ -404,8 +404,6 @@ core:
         write_a_reply: 'Eine Antwort schreiben…'
         you: Du
     views:
-        api:
-            invalid_username_message: 'Der Nutzername darf nur Buchstaben, Zahlen und Gedankenstriche enthalten.'
         content:
             javascript_disabled_message: 'Dieses Forum ist für moderne Browser mit JavaScript optimiert.'
             load_error_message: 'Beim Laden dieser Seite ist etwas schiefgelaufen.'

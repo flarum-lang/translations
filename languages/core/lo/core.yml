@@ -404,8 +404,6 @@ core:
         write_a_reply: 'Write a Reply...'
         you: You
     views:
-        api:
-            invalid_username_message: ບໍ່ພົບຂໍ້ມູນ
         content:
             javascript_disabled_message: 'This site is best viewed in a modern browser with JavaScript enabled.'
             load_error_message: 'Something went wrong while trying to load the full version of this site. Try hard-refreshing this page to fix the error.'

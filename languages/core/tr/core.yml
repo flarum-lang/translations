@@ -404,8 +404,6 @@ core:
         write_a_reply: 'Bir Yanıt Yaz...'
         you: Sen
     views:
-        api:
-            invalid_username_message: 'Kullanıcı adı sadece harfler, rakamlar ve kısa çizgiler içerebilir.'
         content:
             javascript_disabled_message: 'Bu site en iyi JavaScript etkinleştirilmiş modern bir tarayıcıda görüntülenir.'
             load_error_message: 'Bu sitenin tam sürümünü yüklemeye çalışırken bir şeyler ters gitti. Hatayı düzeltmek için bu sayfayı yenilemeyi deneyin.'

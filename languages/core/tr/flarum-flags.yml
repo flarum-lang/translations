@@ -28,7 +28,6 @@ flarum-flags:
             flag_button: Bildir
         post:
             dismiss_flag_button: 'Bildirmeyi Yoksay'
-            dismiss_flag_tooltip: 'Bildirmeyi Yoksay'
             flagged_by_text: '{username] tarafından bildirildi'
             flagged_by_with_reason_text: '{username} tarafından {reason} gerekçesiyle bildirildi'
     ref:

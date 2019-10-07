@@ -28,7 +28,6 @@ flarum-flags:
             flag_button: Rapport
         post:
             dismiss_flag_button: 'Dismiss Flag'
-            dismiss_flag_tooltip: 'Rapporten weghalen'
             flagged_by_text: '%1$s heeft dit gerapporteerd'
             flagged_by_with_reason_text: '%1$s heeft dit gerapporteerd als %1$s'
     ref:
