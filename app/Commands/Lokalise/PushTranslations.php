@@ -32,11 +32,13 @@ class PushTranslations extends Command
                 Storage::disk('repositories')->deleteDirectory($extension->baseName());
 
                 $tag = $this->latestTag($git, $extension) ?? 'dev-master';
-                $git->cloneRepository(
+                $workingCopy = $git->cloneRepository(
                     $extension->repository,
                     $path = storage_path('repositories/' . $extension->baseName()),
                     ['branch' => $tag]
                 );
+
+                $this->info("Cloned repository {$extension->repository} for version {$tag} to {$workingCopy->getDirectory()}");
 
                 $concat = '';
 
@@ -53,6 +55,8 @@ class PushTranslations extends Command
 
                 if (! empty($concat)) {
                     $this->upload($lokalise, $extension, $extension->baseName() . '.yml', $concat);
+
+                    $this->info("Uploaded {$extension->baseName()}");
                 }
             });
     }

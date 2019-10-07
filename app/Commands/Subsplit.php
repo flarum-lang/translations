@@ -66,6 +66,8 @@ class Subsplit extends Command
                 );
 
                 $git->run($split);
+
+                $this->info("Subsplit of {$translation->extendedSubsplit()}.");
             } else {
                 $this->warn('Extended path does not exist: ' . $translation->extendedPath());
             }

@@ -42,6 +42,8 @@ class ReadTranslations extends Command
             $zip->close();
 
             @unlink($path);
+
+            $this->info("Unzipped $type");
         }
     }
 
