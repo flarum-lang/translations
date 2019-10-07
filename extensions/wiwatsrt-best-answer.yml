@@ -1,0 +1,5 @@
+name: Best answer
+repository: git@github.com:wiwatsrt/flarum-ext-best-answer.git
+directory: locale
+matches: en.yml
+lang: en
