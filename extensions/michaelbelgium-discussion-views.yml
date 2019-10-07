@@ -1,0 +1,5 @@
+name: Discussion views
+repository: https://github.com/MichaelBelgium/flarum-discussion-views.git
+directory: locale
+matches: en.yml
+lang: en

@@ -1,0 +1,5 @@
+name: Gamification
+repository: https://github.com/friendsofflarum/gamification.git
+directory: resources/locale
+matches: en.yml
+lang: en

@@ -1,0 +1,5 @@
+name: Pages
+repository: https://github.com/friendsofflarum/pages.git
+directory: resources/locale
+matches: en.yml
+lang: en
