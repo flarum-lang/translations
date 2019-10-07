@@ -404,6 +404,8 @@ core:
         write_a_reply: 'Schrijf een reactie...'
         you: Jij
     views:
+        api:
+            invalid_username_message: Leeg
         content:
             javascript_disabled_message: 'Deze website werkt het beste in een moderne browser met JavaScript ingeschakeld.'
             load_error_message: 'Er is iets misgegaan bij het laden van de volledige versie van deze website.'

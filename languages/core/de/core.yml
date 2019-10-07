@@ -145,6 +145,8 @@ core:
         upload_image:
             remove_button: '=> core.ref.remove'
             upload_button: 'Lade ein Bild hoch…'
+    api:
+        invalid_username_message: 'Der Nutzername darf nur Buchstaben, Zahlen und Gedankenstriche enthalten.'
     email:
         activate_account:
             body: 'Hallo %1$s!\n\nJemand (hoffentlich du!) hat sich im Forum %1$s mit dieser E-Mail-Adresse registriert.\n\nWenn du es warst, dann bitte einfach dem folgenden Link folgen, um das Konto zu aktivieren:\n%1$s\n\nWenn du es nicht selbst warst, ignoriere diese E-Mail.\n'

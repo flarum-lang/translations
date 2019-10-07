@@ -5,7 +5,7 @@ flarum-pusher:
             app_id_label: 'App ID'
             app_key_label: 'App Key'
             app_secret_label: 'App Secret'
-            title: Pusher-Einstellungen
+            title: 'Pusher Settings'
     forum:
         discussion_list:
-            show_updates_text: 'Zeige %1$s aktualisierte Diskussion|Zeige %1$s aktualisierte Diskussionen'
+            show_updates_text: 'Show {count} updated discussion|Show {count} updated discussions'

@@ -28,6 +28,7 @@ flarum-flags:
             flag_button: Melden
         post:
             dismiss_flag_button: 'Meldung ablehnen'
+            dismiss_flag_tooltip: ''
             flagged_by_text: 'Von %1$s gemeldet'
             flagged_by_with_reason_text: 'Von %1$s gemeldet als %1$s'
     ref:

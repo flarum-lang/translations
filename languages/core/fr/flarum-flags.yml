@@ -28,6 +28,7 @@ flarum-flags:
             flag_button: Signaler
         post:
             dismiss_flag_button: 'Annuler le signalement'
+            dismiss_flag_tooltip: ''
             flagged_by_text: '%1$s a signalé ça'
             flagged_by_with_reason_text: '%1$s a signalé ça comme %1$s'
     ref:

@@ -80,6 +80,7 @@ validation:
         numeric: ':attribute moet tenminste :min zijn.'
         string: ':attribute moet tenminste :min karakters bevatten.'
     not_in: ':attribute is ongeldig.'
+    not_regex: 'The :attribute format is invalid.'
     numeric: ':attribute moet een nummer zijn.'
     present: ':attribute moet aanwezig zijn.'
     regex: ':attribute formaat is ongeldig.'

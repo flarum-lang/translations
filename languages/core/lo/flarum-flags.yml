@@ -28,7 +28,7 @@ flarum-flags:
             flag_button: Flag
         post:
             dismiss_flag_button: 'Dismiss Flag'
-            dismiss_flag_tooltip: ''
+            dismiss_flag_tooltip: ບໍ່ພົບຂໍ້ມູນ
             flagged_by_text: 'Flagged by {username}'
             flagged_by_with_reason_text: 'Flagged by {username} as {reason}'
     ref:

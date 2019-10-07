@@ -126,7 +126,7 @@ core:
             delete_posts_forever_label: 'Delete posts forever'
             delete_posts_label: 'Delete posts'
             edit_posts_label: 'Edit posts'
-            edit_users_label: 'Edit users'
+            edit_users_label: ແກ້ໄຂຜູ້ໃຊ້
             global_heading: Global
             moderate_heading: Moderate
             new_group_button: 'New Group'
@@ -262,7 +262,7 @@ core:
             discussion_renamed_text: '{username} changed the title'
             empty_text: 'No Notifications'
             mark_all_as_read_tooltip: '=> core.ref.mark_all_as_read'
-            mark_as_read_tooltip: 'Mark as Read'
+            mark_as_read_tooltip: 'ໝາຍ ວ່າອ່ານແລ້ວ'
             title: '=> core.ref.notifications'
             tooltip: '=> core.ref.notifications'
         post_controls:
@@ -316,8 +316,8 @@ core:
             button: Controls
             delete_button: '=> core.ref.delete'
             delete_confirmation: 'Are you sure you want to delete this user? All of the user''s posts will be deleted.'
-            delete_error_message: 'Deletion of user <i>%1$s (%1$s)</i> failed'
-            delete_success_message: 'User <i>%1$s (%1$s)</i> was deleted'
+            delete_error_message: 'ການລຶບຜູ້ໃຊ້ <i> %1$s ( %1$s ) </i>ບໍ່ສຳເລັດ'
+            delete_success_message: 'ຜູ້ໃຊ້ <i> %1$s ( %1$s ) </i> ຖືກລຶບອອກແລ້ວ'
             edit_button: '=> core.ref.edit'
         user_email_confirmation:
             alert_message: '=> core.ref.confirmation_email_sent'
@@ -405,7 +405,7 @@ core:
         you: You
     views:
         api:
-            invalid_username_message: ''
+            invalid_username_message: ບໍ່ພົບຂໍ້ມູນ
         content:
             javascript_disabled_message: 'This site is best viewed in a modern browser with JavaScript enabled.'
             load_error_message: 'Something went wrong while trying to load the full version of this site. Try hard-refreshing this page to fix the error.'
@@ -414,14 +414,14 @@ core:
             next_page_button: '=> core.ref.next_page'
             previous_page_button: '=> core.ref.previous_page'
         error:
-            csrf_token_mismatch: 'You have been inactive for too long.'
-            csrf_token_mismatch_return_link: 'Go back, to try again'
-            invalid_confirmation_token: 'This confirmation link has already been used or is invalid.'
-            not_authenticated: 'You do not have permission to access this page. Try again after logging in.'
-            not_found: 'The page you requested could not be found.'
-            not_found_return_link: 'Return to %1$s'
-            permission_denied: 'You do not have permission to access this page.'
-            unknown: 'An error occurred while trying to load this page.'
+            csrf_token_mismatch: 'ທ່ານບໍ່ໄດ້ໃຊ້ລະບົບ ດົນເກີນໄປ.'
+            csrf_token_mismatch_return_link: 'ກັບໄປ, ເພື່ອລອງ ໃໝ່ ອີກຄັ້ງ'
+            invalid_confirmation_token: 'ລິ້ງຢືນຢັນນີ້ຖືກ ນຳ ໃຊ້ແລ້ວຫລື ລິ້ງດັ່ງກ່າວແມ່ນບໍ່ຖືກຕ້ອງ.'
+            not_authenticated: 'ທ່ານບໍ່ມີສິດໃນການເຂົ້າເຖິງ ໜ້າ ນີ້. ກະລຸນາລອງ ໃໝ່ ອີກຄັ້ງຫລັງຈາກເຂົ້າສູ່ລະບົບ.'
+            not_found: 'ບໍ່ພົບເຫັນ ໜ້າ ທີ່ທ່ານຂໍ.'
+            not_found_return_link: 'ກັບໄປຫາ %1$s'
+            permission_denied: 'ທ່ານບໍ່ມີສິດໃນການເຂົ້າເຖິງ ໜ້າ ນີ້.'
+            unknown: 'ມີຂໍ້ຜິດພາດເກີດຂື້ນໃນຂະນະທີ່ພະຍາຍາມໂຫລດ ໜ້າ ນີ້.'
         index:
             all_discussions_heading: '=> core.ref.all_discussions'
             next_page_button: '=> core.ref.next_page'

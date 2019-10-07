@@ -1,0 +1,19 @@
+flarum-likes:
+    admin:
+        permissions:
+            like_posts_label: 'ມັກ ໂພສ'
+    forum:
+        notifications:
+            others_text: '=> core.ref.some_others'
+            post_liked_text: '{username} ມັກໂພດຂອງທ່ານ'
+        post_likes:
+            title: ຜູ້ໃຊ້ທີ່ມັກແບບນີ້
+        post:
+            like_link: ມັກ
+            liked_by_self_text: '{users} ມັກສິ່ງນີ້.'
+            liked_by_text: '{users} ມັກສິ່ງນີ້. | {users} ມັກແບບນີ້.'
+            others_link: '=> core.ref.some_others'
+            unlike_link: ບໍ່​ມັກ
+            you_text: '=> core.ref.you'
+        settings:
+            notify_post_liked_label: ຄົນທີ່ມັກກະທູ້ຂອງຂ້ອຍ

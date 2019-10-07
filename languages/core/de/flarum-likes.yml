@@ -12,7 +12,6 @@ flarum-likes:
             like_link: 'Gefällt mir'
             liked_by_self_text: '%1$s gefällt das.'
             liked_by_text: '%1$s gefällt das.|%1$s gefällt das.'
-            others_link: '=> core.ref.some_others'
             unlike_link: 'Gefällt mir nicht mehr'
             you_text: '=> Dir'
         settings:

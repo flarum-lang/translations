@@ -404,6 +404,8 @@ core:
         write_a_reply: 'Rédigez une réponse…'
         you: Vous
     views:
+        api:
+            invalid_username_message: ''
         content:
             javascript_disabled_message: 'Ce site est optimisé pour être consulté depuis un navigateur moderne dans lequel JavaScript est activé.'
             load_error_message: 'Une erreur est survenue lors de la tentative de chargement de la version complète de ce site. Veuillez purger le cache de votre navigateur et rafraîchir cette page pour tenter de corriger cette erreur.'

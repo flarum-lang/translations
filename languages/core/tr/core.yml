@@ -126,6 +126,7 @@ core:
             delete_posts_forever_label: 'Gönderileri kalıcı olarak sil'
             delete_posts_label: 'Gönderileri sil'
             edit_posts_label: 'Gönderileri düzenle'
+            edit_users_label: 'Kullanıcıları düzenle'
             global_heading: Genel
             moderate_heading: Yönetim
             new_group_button: 'Yeni Grup'
@@ -224,7 +225,7 @@ core:
             email_sent_message: 'Şifrenizi sıfırlamak için bir bağlantı içeren bir e-posta gönderdik. Bir veya iki dakika içinde almazsanız istenmeyen klasörünüzü kontrol edin.'
             not_found_message: 'Bu e-posta adresine kayıtlı kullanıcı yok.'
             submit_button: 'Şifremi Sıfırla'
-            text: 'E-posta adresinizi girin ve size şifre sıfırlama bağlantısı göndereceğiz.'
+            text: 'E-posta adresinizi girin, size şifre sıfırlama bağlantısı göndereceğiz.'
             title: 'Şifremi Unuttum'
         header:
             admin_button: Yönetim
@@ -261,6 +262,7 @@ core:
             discussion_renamed_text: '{username} başlığı değiştirdi'
             empty_text: 'Bildirim Yok'
             mark_all_as_read_tooltip: '=> core.ref.mark_all_as_read'
+            mark_as_read_tooltip: 'Okundu Olarak İşaretle'
             title: '=> core.ref.notifications'
             tooltip: '=> core.ref.notifications'
         post_controls:
@@ -314,6 +316,8 @@ core:
             button: Seçenekler
             delete_button: '=> core.ref.delete'
             delete_confirmation: 'Bu kullanıcıyı silmek istediğinize emin misiniz? Kullanıcının tüm gönderileri silinecek.'
+            delete_error_message: '<i>%1$s (%1$s)</i> silinmesi başarısız oldu'
+            delete_success_message: '<i>%1$s (%1$s)</i> başarıyla silindi'
             edit_button: '=> core.ref.edit'
         user_email_confirmation:
             alert_message: '=> core.ref.confirmation_email_sent'
@@ -325,7 +329,7 @@ core:
             avatar_upload_tooltip: 'Yeni bir profil fotoğrafı yükle'
             discussions_link: '=> core.ref.discussions'
             in_discussion_text: '{discussion} tartışmasında'
-            joined_date_text: '{ago} önce katıldı'
+            joined_date_text: '{ago} katıldı'
             online_text: Çevrimiçi
             posts_empty_text: 'Burada hiç gönderi yok gibi görünüyor.'
             posts_link: '=> core.ref.posts'
@@ -360,7 +364,7 @@ core:
     ref:
         all_discussions: 'Tüm Tartışmalar'
         change_email: 'E-posta Değiştir'
-        change_password: 'Şifre Değiştir'
+        change_password: 'Şifreyi Değiştir'
         color: Renk
         confirm_password: 'Şifreyi Onayla'
         confirmation_email_sent: '{email} adresine bir onay e-postası gönderdik. Yakında gelmezse, spam klasörünü kontrol et.'
@@ -400,6 +404,8 @@ core:
         write_a_reply: 'Bir Yanıt Yaz...'
         you: Sen
     views:
+        api:
+            invalid_username_message: 'Kullanıcı adı sadece harfler, rakamlar ve kısa çizgiler içerebilir.'
         content:
             javascript_disabled_message: 'Bu site en iyi JavaScript etkinleştirilmiş modern bir tarayıcıda görüntülenir.'
             load_error_message: 'Bu sitenin tam sürümünü yüklemeye çalışırken bir şeyler ters gitti. Hatayı düzeltmek için bu sayfayı yenilemeyi deneyin.'
@@ -407,6 +413,15 @@ core:
         discussion:
             next_page_button: '=> core.ref.next_page'
             previous_page_button: '=> core.ref.previous_page'
+        error:
+            csrf_token_mismatch: 'Çok uzun süre eylem gerçekleştirmedin.'
+            csrf_token_mismatch_return_link: 'Geri dön ve tekrar dene'
+            invalid_confirmation_token: 'Bu onaylama bağlantısı zaten kullanılmış veya geçerli değil.'
+            not_authenticated: 'Bu sayfaya erişim izniniz yok, giriş yaptıktan sonra tekrar deneyin.'
+            not_found: 'İstediğiniz sayfa bulunamadı.'
+            not_found_return_link: '%1$s forumuna geri dön'
+            permission_denied: 'Bu sayfaya erişim izniniz yok.'
+            unknown: 'Sayfa yüklenmeye çalışırken bir hata oluştu.'
         index:
             all_discussions_heading: '=> core.ref.all_discussions'
             next_page_button: '=> core.ref.next_page'
