@@ -25,8 +25,7 @@ class ReadTranslations extends Command
                     'format'             => 'yaml',
                     'original_filenames' => true,
                     'filter_data' => ['reviewed'],
-                    'export_empty_as' => 'base',
-                    'all_platforms' => true
+                    'export_empty_as' => 'skip'
                 ]);
             } catch (LokaliseResponseException $e) {
                 $this->error("Unable to download project {$e->getMessage()}");
