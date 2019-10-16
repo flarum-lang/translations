@@ -49,7 +49,7 @@ class Subsplit extends Command
                     'subsplit',
                     'publish',
                     '--heads=master',
-                    $this->token($translation->coreSubsplit())
+                    $this->useToken($translation->coreSubsplit())
                 );
 
                 $git->run($split, base_path());
