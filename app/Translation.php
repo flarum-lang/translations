@@ -2,7 +2,6 @@
 
 namespace App;
 
-use GuzzleHttp\Psr7\Uri;
 use Illuminate\Support\Fluent;
 
 /**

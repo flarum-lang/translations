@@ -49,7 +49,7 @@ class Subsplit extends Command
                     'subsplit',
                     'publish',
                     '--heads=master',
-                    $translation->coreSubsplit()
+                    $this->token($translation->coreSubsplit())
                 );
 
                 $git->run($split, base_path());
@@ -62,7 +62,7 @@ class Subsplit extends Command
                     'subsplit',
                     'publish',
                     '--heads=master',
-                    $translation->extendedSubsplit()
+                    $this->useToken($translation->extendedSubsplit())
                 );
 
                 $git->run($split);
@@ -88,5 +88,14 @@ class Subsplit extends Command
     protected function deleteSubsplitDirectory(): void
     {
         Storage::disk('root')->deleteDirectory('.subsplit');
+    }
+
+    protected function useToken(string $command): string
+    {
+        if ($token = getenv('GITHUB_TOKEN') && $actor = getenv('GITHUB_ACTOR')) {
+            return str_replace(['git@github.com:', "https://$actor:$token@github.com/", $command]);
+        }
+
+        return $command;
     }
 }
