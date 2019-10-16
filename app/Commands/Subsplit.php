@@ -92,7 +92,10 @@ class Subsplit extends Command
 
     protected function useToken(string $command): string
     {
-        if ($token = getenv('GITHUB_PERSONAL_ACCESS_TOKEN') && $actor = getenv('GITHUB_PERSONAL_ACCESS_USER')) {
+        $token = getenv('GITHUB_PERSONAL_ACCESS_TOKEN');
+        $actor = getenv('GITHUB_PERSONAL_ACCESS_USER');
+
+        if ($token && $actor) {
             return str_replace('git@github.com:', "https://$actor:$token@github.com/", $command);
         }
 

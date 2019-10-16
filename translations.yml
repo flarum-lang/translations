@@ -1,3 +1,8 @@
+- code: de
+  title: German
+  repository:
+    core: git@github.com:flarum-lang/de.git
+    extended: git@github.com:flarum-lang/de-extended.git
 - code: es
   title: Spanish
   repository:
