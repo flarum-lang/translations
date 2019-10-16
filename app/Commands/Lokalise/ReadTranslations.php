@@ -28,6 +28,7 @@ class ReadTranslations extends Command
                     'export_empty_as' => 'base'
                 ]);
             } catch (LokaliseResponseException $e) {
+                $this->error("Unable to download project {$e->getMessage()}");
                 continue;
             }
 
