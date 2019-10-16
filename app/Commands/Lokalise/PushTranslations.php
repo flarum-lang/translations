@@ -31,7 +31,7 @@ class PushTranslations extends Command
             ->each(function (Extension $extension) use ($git, $lokalise) {
                 Storage::disk('repositories')->deleteDirectory($extension->baseName());
 
-                $tag = $this->latestTag($git, $extension) ?? 'dev-master';
+                $tag = $this->latestTag($extension) ?? 'dev-master';
 
                 $workingCopy = $git->cloneRepository(
                     $extension->repository,
@@ -62,9 +62,9 @@ class PushTranslations extends Command
             });
     }
 
-    protected function latestTag(GitWrapper $git, Extension $extension): ?string
+    protected function latestTag(Extension $extension): ?string
     {
-        $output = $git->run(new GitCommand('ls-remote', '--tags', $extension->repository));
+        $output = (new GitWrapper())->run(new GitCommand('ls-remote', '--tags', $extension->repository));
 
         $highest = null;
 

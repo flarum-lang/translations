@@ -8,6 +8,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use LaravelZero\Framework\Commands\Command;
+use Lokalise\Exceptions\LokaliseResponseException;
 use Lokalise\LokaliseApiClient;
 use Symfony\Component\Finder\Finder;
 
@@ -15,7 +16,7 @@ class ImportTranslations extends Command
 {
     use GitOutPutHandling;
 
-    protected $signature = 'lokalise:import {repository}';
+    protected $signature = 'lokalise:import {repository} {--location=*}';
     protected $description = 'Imports an existing translation pack into lokalise.';
 
     public function handle(LokaliseApiClient $lokalise)
@@ -53,15 +54,24 @@ class ImportTranslations extends Command
             $isCore = Str::startsWith($file->getBasename(), 'flarum-')
                 || !Str::contains($file->getBasename('.yml'), '-');
 
-            $lokalise->files->upload(
-                $isCore ? Inventory::LOKALISE_CORE_PROJECT : Inventory::LOKALISE_OTHER_PROJECT,
-                [
-                    'data'         => base64_encode($file->getContents()),
-                    'filename'     => $file->getBasename(),
-                    'lang_iso'     => $locale
-                ]
-            );
+            try {
+                $lokalise->files->upload(
+                    $isCore ? Inventory::LOKALISE_CORE_PROJECT : Inventory::LOKALISE_OTHER_PROJECT,
+                    [
+                        'data'     => base64_encode($this->removeMappings($file->getContents())),
+                        'filename' => $file->getBasename(),
+                        'lang_iso' => $locale
+                    ]
+                );
+            } catch (LokaliseResponseException $e) {
+                $this->error("{$file->getBasename()} wasn't uploaded: {$e->getMessage()}");
+            }
         }
+    }
+
+    protected function removeMappings(string $content): string
+    {
+        return preg_replace('/("?\=\> [^\v]+)/s', '', $content);
     }
 
     protected function identifyLocale(string $path): ?string
@@ -69,7 +79,7 @@ class ImportTranslations extends Command
         $json = file_get_contents("$path/composer.json");
         $composer = json_decode($json, true);
 
-        return Arr::get($composer, 'extra.flarum-locale.code');
+        return str_replace('-', '_', Arr::get($composer, 'extra.flarum-locale.code'));
     }
 
     protected function files(string $path)
@@ -78,7 +88,9 @@ class ImportTranslations extends Command
             'locale', 'resources/locale', '/'
         ];
 
-        foreach ($usualLocations as $location) {
+        $locations = count($this->option('location')) ? $this->option('location') : $usualLocations;
+
+        foreach ($locations as $location) {
             if (! is_dir($path . '/' . $location)) continue;
 
             $finder = (new Finder())
