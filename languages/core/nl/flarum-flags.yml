@@ -27,7 +27,6 @@ flarum-flags:
         post_controls:
             flag_button: Rapport
         post:
-            dismiss_flag_button: 'Dismiss Flag'
             flagged_by_text: '%1$s heeft dit gerapporteerd'
             flagged_by_with_reason_text: '%1$s heeft dit gerapporteerd als %1$s'
     ref:
