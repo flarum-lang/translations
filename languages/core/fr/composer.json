@@ -1,0 +1,28 @@
+{
+  "name": "flarum-lang/fr",
+  "type": "flarum-extension",
+  "description": "Flarum language pack French.",
+  "keywords": ["locale", "fr", "French"],
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.10"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    },
+    "flarum-extension": {
+      "title": "French",
+      "icon": {
+        "image": "icon.svg",
+        "backgroundColor": "#00247d",
+        "backgroundSize": "cover",
+        "backgroundPosition": "center"
+      }
+    },
+    "flarum-locale": {
+      "code": "fr",
+      "title": "French"
+    }
+  }
+}
