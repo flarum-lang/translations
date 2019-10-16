@@ -1,15 +1,25 @@
 - code: nl
+  title: Dutch
   repository:
     core: git@github.com:flarum-lang/nl.git
     extended: git@github.com:flarum-lang/nl-extended.git
-  title: Dutch
 - code: tr
+  title: Turkish
   repository:
     core: git@github.com:flarum-lang/tr.git
     extended: git@github.com:flarum-lang/tr-extended.git
-  title: Turkish
 - code: lo
+  title: Lao
   repository:
     core: git@github.com:flarum-lang/lo.git
     extended: git@github.com:flarum-lang/lo-extended.git
-  title: Lao
+- code: es
+  title: Spanish
+  repository:
+    core: git@github.com:flarum-lang/es.git
+    extended: git@github.com:flarum-lang/es-extended.git
+- code: pt-BR
+  title: Brazilian Portuguese
+  repository:
+    core: git@github.com:flarum-lang/pt-br.git
+    extended: git@github.com:flarum-lang/pt-br-extended.git
