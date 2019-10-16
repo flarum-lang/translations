@@ -14,6 +14,8 @@ trait GitOutPutHandling
         $git = new GitWrapper();
 
         $git->addOutputListener(new class($this) implements GitOutputListenerInterface {
+            private $masked = ['GITHUB_TOKEN', 'GITHUB_PERSONAL_ACCESS_TOKEN'];
+
             /**
              * @var Command
              */
@@ -26,7 +28,11 @@ trait GitOutPutHandling
 
             public function handleOutput(GitOutputEvent $gitOutputEvent): void
             {
-                $this->command->comment($gitOutputEvent->getBuffer());
+                $buffer = str_replace(array_walk($this->masked, function ($env) {
+                    return getenv($env);
+                }), '*** masked ***', $gitOutputEvent->getBuffer());
+
+                $this->command->comment($buffer);
             }
         });
 
