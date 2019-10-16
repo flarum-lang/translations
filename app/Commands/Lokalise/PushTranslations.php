@@ -36,7 +36,7 @@ class PushTranslations extends Command
                 $workingCopy = $git->cloneRepository(
                     $extension->repository,
                     $path = storage_path('repositories/' . $extension->baseName()),
-                    ['branch' => $tag, '-c' => 'advice.detachedHead=false']
+                    ['branch' => $tag, '--config' => 'advice.detachedHead=false']
                 );
 
                 $this->info("Cloned repository {$extension->repository} for version {$tag} to {$workingCopy->getDirectory()}");
