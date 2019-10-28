@@ -1,5 +1,5 @@
 name: Sentry
 repository: https://github.com/friendsofflarum/sentry.git
-directory: locale
+directory: resources/locale
 matches: en.yml
 lang: en
