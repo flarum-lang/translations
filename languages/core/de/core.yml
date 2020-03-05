@@ -27,7 +27,6 @@ core:
             submit_button: '=> core.ref.save_changes'
         basics:
             all_discussions_label: '=> core.ref.all_discussions'
-            default_language_heading: Deutsch
             forum_description_heading: 'Beschreibung des Forums'
             forum_description_text: 'Kurze Beschreibung des Forums. Diese wird in in den meta-Tags für die Suchmaschinen erscheinen.'
             forum_title_heading: 'Titel des Forums'
