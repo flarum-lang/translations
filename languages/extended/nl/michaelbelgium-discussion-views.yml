@@ -4,9 +4,6 @@ core:
             popular_button: Populair
             unpopular_button: Onpopulair
 flarum_discussion_views:
-    admin:
-        permissions:
-            reset_views_label: 'Wijzigen discussie''s keer bekeken'
     forum:
         discussion_controls:
             resetviews_button: 'Wijzig aantal keer bekeken'
