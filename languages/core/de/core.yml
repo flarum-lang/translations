@@ -8,7 +8,6 @@ core:
         appearance:
             colored_header_label: 'Header einfärben'
             colors_heading: Farben
-            colors_text: 'Zwei Farben wählen, um den Grundton des Forums zu ändern. Die erste Farbe ist für die Akzente, die zweite ist für die Hintergrundelemente.'
             custom_footer_heading: 'Individuelle Fußzeile'
             custom_footer_text: '=> core.ref.custom_footer_text'
             custom_header_heading: 'Individuelle Kopfzeile'
@@ -314,7 +313,6 @@ core:
         user_controls:
             button: Bearbeiten
             delete_button: '=> core.ref.delete'
-            delete_confirmation: 'Soll diese*r Nutzer*in wirklich gelöscht werden? Alle Beiträge werden gelöscht.'
             delete_error_message: 'Löschen des Nutzers <i>%1$s (%1$s)</i> fehlgeschlagen'
             delete_success_message: 'Nutzer <i>%1$s (%1$s)</i> wurde gelöscht'
             edit_button: '=> core.ref.edit'
@@ -364,7 +362,6 @@ core:
         all_discussions: 'Alle Diskussionen'
         change_email: 'E-Mail ändern'
         change_password: 'Passwort ändern'
-        color: Color
         confirm_password: 'Passwort bestätigen'
         confirmation_email_sent: 'Wir haben eine Bestätigungsmail an %1$s gesendet. Bitte schaue in deinem Spam-Ordner nach, falls nichts ankommen sollte.'
         custom_footer_text: 'Füge eigenen HTML-Code hinzu, welcher am Ende der Seite eingefügt wird.'
