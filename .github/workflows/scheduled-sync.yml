@@ -2,9 +2,7 @@ name: Sync translations
 on:
   push:
     branches:
-      - master
-  schedule:
-    - cron: '0 * * * *'
+      - none
 jobs:
   sync:
     name: Sync translations
